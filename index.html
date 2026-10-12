@@ -30,6 +30,14 @@
     justify-content: center;
   }
 
+  /* Fallback, falls das iframe zu schmal für 3 Kacheln ist */
+  @media (max-width: 920px) {
+    .flip-grid { grid-template-columns: repeat(2, var(--card-w)); }
+  }
+  @media (max-width: 620px) {
+    .flip-grid { grid-template-columns: var(--card-w); }
+  }
+
   .flip-card {
     width: var(--card-w);
     height: var(--card-h);
